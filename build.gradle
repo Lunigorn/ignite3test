@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+ext {
+    ignite3Version = '3.0.0-alpha5'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.apache.ignite:ignite-client:${ignite3Version}"
+}
+
+application {
+    mainClass = 'lunigorn.ignite3test.Test'
+}

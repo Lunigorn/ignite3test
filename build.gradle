@@ -9,15 +9,18 @@ java {
 }
 
 ext {
-    ignite3Version = '3.0.0-alpha5'
+//    ignite3Version = '3.0.0-alpha5'
+    ignite3Version = '3.0.0-SNAPSHOT'
 }
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     implementation "org.apache.ignite:ignite-client:${ignite3Version}"
+    implementation "org.apache.ignite:ignite-jdbc:${ignite3Version}"
 }
 
 application {
